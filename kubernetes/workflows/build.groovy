@@ -2,15 +2,12 @@ pipeline{
 	agent any
 	stages
 	{
-		stage("K8 Nodes"){
-			steps{
-				kubernetesDeploy(
-					kubeconfigId: 'k8-config',
-					//enableConfigsubstituion: true
-					enableConfigSubstitution: true
-					sh "kubectl get nodes"
-				)
-			}
-		}
-	}
+	stage('Deploy App') {
+      steps {
+        script {
+          kubernetesDeploy(configs: "hellowhale.yml", kubeconfigId: "mykubeconfig")
+        }
+      }
+    }
+}
 }
