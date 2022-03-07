@@ -12,7 +12,7 @@ pipeline{
 					kubeconfigId: 'k8-config',
 					//enableConfigsubstituion: true
 					enableConfigSubstitution: true
-					kubectl get nodes
+					sh "kubectl get nodes"
 				)
 			}
 		}
