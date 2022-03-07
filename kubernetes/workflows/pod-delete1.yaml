@@ -250,8 +250,7 @@ spec:
     outputs: {}
   - container:
       args:
-      - 'kubectl delete chaosengine -l ''instance_id in (264b1d8f-0918-414e-ac40-fc81fe300f02,
-        )'' -n {{workflow.parameters.adminModeNamespace}} '
+      - 'kubectl delete chaosengine -l ''instance_id in (264b1d8f-0918-414e-ac40-fc81fe300f02, )'' -n {{workflow.parameters.adminModeNamespace}} '
       command:
       - sh
       - -c
