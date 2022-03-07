@@ -10,7 +10,7 @@ pipeline{
 	stage('Deploy App') {
       steps {
         script {
-          kubernetesDeploy(configs: "pod-kill.yaml", kubeconfigId: "k8-config")
+          kubernetesDeploy(configs: "kubernetes/workflows/pod-kill.yaml", kubeconfigId: "k8-config")
         }
       }
     }
